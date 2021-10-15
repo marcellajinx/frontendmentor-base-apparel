@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-image: url("base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 0.1fr 1fr;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.left {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+    width: 49%;
+    margin:3.5rem auto 3.5rem 8rem;
+}
+
+.logo {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.logo img {
+    height: 2.5rem;
+}
+
+.content {
+    margin: 5rem 0;
+    grid-row: 1/-1;
+    grid-column: 1/2;
+    color: hsl(0, 36%, 70%);
+    font-size: 1rem;
+}
+
+.content h1 {
+    letter-spacing: 0.8rem;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 110%;
+}
+
+.content span{
+    color: hsl(0, 6%, 24%);
+    font-weight: 600;
+}
+
+.content p {
+    font-weight: 400;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    margin-top: 2rem;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding-left: 1.5rem;
+    background: transparent;
+    position: absolute;
+    opacity: 80%;
+}
+
+::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-weight: 400;
+    line-height: 1rem;
+    opacity: 50%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+button {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    padding: 0 2rem;
+    display: inline-block;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+input, button {
+    outline: none;
+    border-radius: 1000px;
+    border: 0.09rem solid hsl(0, 36%, 70%);
+    height: 3rem;
+}
+
+.cover {
+    grid-row: 1/-1;
+    grid-column: 2/-1;
+    background-image: url("base-apparel-coming-soon-master/images/hero-desktop.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 550px){
+    .container {
+        grid-template-columns: auto;
+        grid-template-rows: 0.3fr 1.3fr 2fr;
+    }
+
+    .left {
+        margin: 1rem auto;
+        width: 85%;
+    }
+
+    .logo {
+        grid-column: 1/-1;
+        margin: 0.5rem 0;
+    }
+
+    .logo img {
+        height: 1rem;
+    }
+
+    .cover {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        background-image: url("base-apparel-coming-soon-master/images/hero-mobile.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content {
+        grid-column: 1/-1;
+        grid-row: 3/-1;
+        position: relative;
+        margin: 19rem 0 0 0;
+        bottom: 0;
+    }
+    
+    .content h1 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .content p {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 440px) {
+        .container {
+            background-color: red;
+        }
+    }
+}
