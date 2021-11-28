@@ -99,7 +99,7 @@ input, button {
 .cover {
     grid-row: 1/-1;
     grid-column: 2/-1;
-    background-image: url("base-apparel-coming-soon-master/images/hero-desktop.jpg");
+    background-image: url("images/hero-desktop.jpg");
     background-attachment: fixed;
     background-size: contain;
     background-position: right;
